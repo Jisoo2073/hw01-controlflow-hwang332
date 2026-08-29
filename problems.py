@@ -29,7 +29,21 @@ def get_year_type(year):
     
 
     """
-    pass  #when you complete your function get rid of the pass (This only allows the code to run when you have an incomplete function)
+    if year % 2:
+        return "odd"
+    else:           # if the result is even:
+        if year % 4 == 0:
+            if year % 100 == 0:
+                if year % 400 == 0:
+                    return "leap"
+                else:
+                    return "even"
+            else:
+                return "leap"
+
+        else:
+            return "even"
+
 
 
 def get_triangular_number_list(given_number):
@@ -41,7 +55,17 @@ def get_triangular_number_list(given_number):
     
 
     """
-    pass  #when you complete your function get rid of the pass (This only allows the code to run when you have an incomplete function)
+    tri_list = []
+    tri_num = 1
+    add_num = 2
+
+    while tri_num <= given_number:
+        tri_list.append(tri_num)
+        tri_num += add_num
+        add_num += 1
+
+    return tri_list
+
 
 #When you run this python file you should be able to check your work with these test cases
 
